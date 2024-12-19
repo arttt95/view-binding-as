@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_executar"
+        android:id="@+id/btnExecutar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Executar"
@@ -20,12 +20,12 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/btn_clicar"
+        android:id="@+id/btnClicar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:text="Clicar"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_executar"
-        app:layout_constraintStart_toEndOf="@+id/btn_executar"
-        app:layout_constraintTop_toTopOf="@+id/btn_executar" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnExecutar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnExecutar"
+        app:layout_constraintTop_toTopOf="@+id/btnExecutar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
