@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -41,6 +42,8 @@ class MainActivity : AppCompatActivity() {
 //        ----- ViewGroups -----
 //        LinearLayout -> ViewGroup -> View
 //        RecyclerView -> ViewGroup -> View
+//        ConstraintLayout -> ViewGroup -> View ***(MAIN)***
+//        LinearLayout -> ViewGroup -> View
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 
