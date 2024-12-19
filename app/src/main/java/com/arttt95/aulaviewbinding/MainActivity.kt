@@ -1,12 +1,16 @@
 package com.arttt95.aulaviewbinding
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.arttt95.aulaviewbinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +30,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        /*fun clique(view: View) {
+
+        }*/
+//        ------- Views -------
+//        TextView -> View
+//        Button -> TextView -> View
+
+//        ----- ViewGroups -----
+//        LinearLayout -> ViewGroup -> View
+//        RecyclerView -> ViewGroup -> View
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 
