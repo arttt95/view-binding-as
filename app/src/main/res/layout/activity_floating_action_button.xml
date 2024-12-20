@@ -27,11 +27,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        app:constraint_referenced_ids="fabFavorite,fabShopcart"
+        app:constraint_referenced_ids="fabFilter,fabFavorite,fabShopcart"
         tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabFavorite"
+        android:id="@+id/fabFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toTopOf="@+id/fabAdd"
         app:layout_constraintEnd_toEndOf="@+id/fabAdd"
         app:layout_constraintStart_toStartOf="@+id/fabAdd"
-        app:srcCompat="@drawable/ic_favorite_in_24" />
+        app:srcCompat="@drawable/ic_filter_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabShopcart"
@@ -55,6 +55,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/fabFavorite"
         app:srcCompat="@drawable/ic_shopcart_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabCustomSize="38dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fabFilter"
+        app:layout_constraintEnd_toEndOf="@+id/fabFilter"
+        app:layout_constraintStart_toStartOf="@+id/fabFilter"
+        app:srcCompat="@drawable/ic_favorite_in_24" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/floatingActionButton"
