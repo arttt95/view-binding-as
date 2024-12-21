@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AulaViewBinding"
         tools:targetApi="31">
         <activity
+            android:name=".SwitchToggleButtonActivity"
+            android:exported="false" />
+        <activity
             android:name=".RadioCheckActivity"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SwitchToggleButtonActivity"
+            android:name=".AlertDialogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
