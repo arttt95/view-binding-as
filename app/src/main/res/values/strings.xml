@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AulaViewBinding</string>
+
+    <string-array name="ninjas">
+        <item>-- Selecione um ninja --</item>
+        <item>Minato</item>
+        <item>Nagato</item>
+        <item>Yahiko</item>
+        <item>Tobirama</item>
+        <item>Obito</item>
+        <item>Shisui</item>
+    </string-array>
+
+
 </resources>

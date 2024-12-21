@@ -1,6 +1,8 @@
 package com.arttt95.aulaviewbinding
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -9,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.arttt95.aulaviewbinding.databinding.ActivitySpinnerBinding
+import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
 
 class SpinnerActivity : AppCompatActivity() {
 
@@ -56,8 +59,12 @@ class SpinnerActivity : AppCompatActivity() {
 
     private fun spinnerExibicao() {
 
-        val ninjas = listOf(
+        /*val ninjas = listOf(
             "-- Selecione um ninja --", "Shisui", "Minato", "Tobirama", "Nagato", "Yahiko"
+        )*/
+
+        val ninjas = resources.getStringArray(
+            R.array.ninjas
         )
 
         binding.spinnerCategorias.adapter = ArrayAdapter<String>(
@@ -65,6 +72,52 @@ class SpinnerActivity : AppCompatActivity() {
             android.R.layout.simple_spinner_dropdown_item,
             ninjas
         )
+
+        /*binding.spinnerCategorias.onItemSelectedListener = object:
+
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+//                val itemSelecionado = parent?.getItemIdAtPosition(position)
+//                val itemSelecionado = parent?.selectedItem // Conteúdo -> String
+                val itemSelecionado = parent?.selectedItemPosition // Posição -> Int
+                binding.textResultadoSpinner.text = itemSelecionado.toString()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }*/
+
+        binding.spinnerCategorias.adapter = ArrayAdapter.createFromResource(
+            this, R.array.ninjas, android.R.layout.simple_spinner_dropdown_item
+        )
+
+        binding.spinnerCategorias.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+//                val itemSelecionado = parent?.getItemIdAtPosition(position)
+//                val itemSelecionado = parent?.selectedItem // Conteúdo -> String
+                val itemSelecionado = parent?.selectedItemPosition // Posição -> Int
+                binding.textResultadoSpinner.text = itemSelecionado.toString()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
 
     }
 }
