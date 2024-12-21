@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
@@ -25,6 +26,8 @@ class FloatingActionButtonActivity : AppCompatActivity() {
             insets
         }
 
+        inicializarToolbar()
+
         with(binding) {
             fabAdd.setOnClickListener {
 
@@ -36,6 +39,23 @@ class FloatingActionButtonActivity : AppCompatActivity() {
 
             }
         }
+
+
+
+    }
+
+    private fun inicializarToolbar() {
+
+        binding.tbMain.title = "YouTube"
+//        binding.tbMain.subtitle = "Mais detalhes"
+        binding.tbMain.setTitleTextColor(
+            ContextCompat.getColor(this, R.color.md_theme_onPrimary)
+        )
+        binding.tbMain.setBackgroundColor(
+            ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
+        )
+
+        setSupportActionBar(binding.tbMain)
 
     }
 }

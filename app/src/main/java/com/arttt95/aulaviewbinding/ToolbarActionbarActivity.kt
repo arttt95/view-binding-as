@@ -1,5 +1,6 @@
 package com.arttt95.aulaviewbinding
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -7,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.MenuProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -29,15 +31,91 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
 //        supportActionBar?.hide()
 
-        inicializarActionbar()
+
+
+        val intent = Intent(this, FloatingActionButtonActivity::class.java)
+
+        inicializarToolbar()
 
         with(binding) {
+
+            btnOutraPagina.setOnClickListener {
+
+                startActivity(intent)
+
+            }
 
         }
 
     }
 
-    private fun inicializarActionbar() {
+    private fun inicializarToolbar() {
+
+        binding.tbMain.title = "YouTube"
+//        binding.tbMain.subtitle = "Mais detalhes"
+        binding.tbMain.setTitleTextColor(
+            ContextCompat.getColor(this, R.color.md_theme_onPrimary)
+        )
+        binding.tbMain.setBackgroundColor(
+            ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
+        )
+
+        binding.tbMain.inflateMenu(R.menu.menu_principal)
+
+        binding.tbMain.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.item_adicionar -> {
+                    Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.item_pesquisar -> {
+                    Toast.makeText(applicationContext, "Pesquisar clicado", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.item_configuracoes -> {
+                    Toast.makeText(applicationContext, "Configurações clicado", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.item_sair -> {
+                    Toast.makeText(applicationContext, "Sair clicado", Toast.LENGTH_SHORT).show()
+                    return@setOnMenuItemClickListener true
+                }
+                else -> return@setOnMenuItemClickListener true
+
+            }
+
+            /*when(menuItem.itemId) {
+                R.id.item_adicionar -> {
+                    Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.item_pesquisar -> {
+                    Toast.makeText(applicationContext, "Pesquisar clicado", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.item_configuracoes -> {
+                    Toast.makeText(applicationContext, "Configurações clicado", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.item_sair -> {
+                    Toast.makeText(applicationContext, "Sair clicado", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> true
+
+            }*/
+        }
+
+//        setSupportActionBar(binding.tbMain)
+//        inicializarActionbar()
+
+    }
+
+
+
+
+
+    /*private fun inicializarActionbar() {
         addMenuProvider(
             object : MenuProvider {
                 override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
@@ -47,16 +125,16 @@ class ToolbarActionbarActivity : AppCompatActivity() {
                 override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                     when(menuItem.itemId) {
                         R.id.item_adicionar -> {
-                            Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_LONG).show()
                         }
                         R.id.item_pesquisar -> {
-                            Toast.makeText(applicationContext, "Pesquisar clicado", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Pesquisar clicado", Toast.LENGTH_LONG).show()
                         }
                         R.id.item_configuracoes -> {
-                            Toast.makeText(applicationContext, "Configurações clicado", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Configurações clicado", Toast.LENGTH_LONG).show()
                         }
                         R.id.item_sair -> {
-                            Toast.makeText(applicationContext, "Sair clicado", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Sair clicado", Toast.LENGTH_LONG).show()
                         }
 
                     }
@@ -66,7 +144,7 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
             }
         )
-    }
+    }*/
 
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
