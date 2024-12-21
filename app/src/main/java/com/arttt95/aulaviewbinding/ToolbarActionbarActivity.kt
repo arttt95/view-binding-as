@@ -1,6 +1,9 @@
 package com.arttt95.aulaviewbinding
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,11 +25,41 @@ class ToolbarActionbarActivity : AppCompatActivity() {
             insets
         }
 
-        supportActionBar?.hide()
+//        supportActionBar?.hide()
 
         with(binding) {
 
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.menu_principal, menu)
+
+        return true
+//        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            R.id.item_adicionar -> {
+                Toast.makeText(this, "Adicionar clicado", Toast.LENGTH_SHORT).show()
+            }
+            R.id.item_pesquisar -> {
+                Toast.makeText(this, "Pesquisar clicado", Toast.LENGTH_SHORT).show()
+            }
+            R.id.item_configuracoes -> {
+                Toast.makeText(this, "Configurações clicado", Toast.LENGTH_SHORT).show()
+            }
+            R.id.item_sair -> {
+                Toast.makeText(this, "Sair clicado", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        return true
+//        return super.onOptionsItemSelected(item)
     }
 }
