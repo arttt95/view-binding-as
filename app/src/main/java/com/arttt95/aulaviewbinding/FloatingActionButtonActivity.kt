@@ -46,16 +46,16 @@ class FloatingActionButtonActivity : AppCompatActivity() {
 
     private fun inicializarToolbar() {
 
-        binding.tbMain.title = "YouTube"
-//        binding.tbMain.subtitle = "Mais detalhes"
-        binding.tbMain.setTitleTextColor(
+        binding.includeToolbar.tbMain.title = "YouTube"
+//        binding.includeToolbar.tbMain.subtitle = "Mais detalhes"
+        binding.includeToolbar.tbMain.setTitleTextColor(
             ContextCompat.getColor(this, R.color.md_theme_onPrimary)
         )
-        binding.tbMain.setBackgroundColor(
+        binding.includeToolbar.tbMain.setBackgroundColor(
             ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
         )
 
-        setSupportActionBar(binding.tbMain)
+        setSupportActionBar(binding.includeToolbar.tbMain)
 
     }
 }

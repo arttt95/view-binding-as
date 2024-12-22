@@ -51,18 +51,18 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
     private fun inicializarToolbar() {
 
-        binding.tbMain.title = "YouTube"
-//        binding.tbMain.subtitle = "Mais detalhes"
-        binding.tbMain.setTitleTextColor(
+        binding.includeToolbar.tbMain.title = "YouTube"
+//        binding.includeToolbar.tbMain.subtitle = "Mais detalhes"
+        binding.includeToolbar.tbMain.setTitleTextColor(
             ContextCompat.getColor(this, R.color.md_theme_onPrimary)
         )
-        binding.tbMain.setBackgroundColor(
+        binding.includeToolbar.tbMain.setBackgroundColor(
             ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
         )
 
-        binding.tbMain.inflateMenu(R.menu.menu_principal)
+        binding.includeToolbar.tbMain.inflateMenu(R.menu.menu_principal)
 
-        binding.tbMain.setOnMenuItemClickListener { menuItem ->
+        binding.includeToolbar.tbMain.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId) {
                 R.id.item_adicionar -> {
                     Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_SHORT).show()
@@ -106,7 +106,7 @@ class ToolbarActionbarActivity : AppCompatActivity() {
             }*/
         }
 
-//        setSupportActionBar(binding.tbMain)
+//        setSupportActionBar(binding.includeToolbar.tbMain)
 //        inicializarActionbar()
 
     }
