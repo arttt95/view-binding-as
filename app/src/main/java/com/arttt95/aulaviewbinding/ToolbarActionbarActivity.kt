@@ -31,7 +31,7 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
 //        supportActionBar?.hide()
 
-        val intent = Intent(this, FloatingActionButtonActivity::class.java)
+        val intent = Intent(this, NovaActivity::class.java)
 
         inicializarToolbar()
 
@@ -51,17 +51,17 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
         binding.includeToolbar.tbMain.title = "YouTube"
 //        binding.includeToolbar.tbMain.subtitle = "Mais detalhes"
-        binding.includeToolbar.tbMain.setTitleTextColor(
+        /*binding.includeToolbar.tbMain.setTitleTextColor(
             ContextCompat.getColor(this, R.color.md_theme_onPrimary)
         )
         binding.includeToolbar.tbMain.setBackgroundColor(
             ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
-        )
+        )*/
 
         binding.includeToolbar.tbMain.inflateMenu(R.menu.menu_principal)
 
-        binding.includeToolbar.tbMain.setOnMenuItemClickListener { menuItem ->
-            when(menuItem.itemId) {
+//        binding.includeToolbar.tbMain.setOnMenuItemClickListener { menuItem ->
+            /*when(menuItem.itemId) {
                 R.id.item_adicionar -> {
                     Toast.makeText(applicationContext, "Adicionar clicado", Toast.LENGTH_SHORT).show()
                     return@setOnMenuItemClickListener true
@@ -80,7 +80,7 @@ class ToolbarActionbarActivity : AppCompatActivity() {
                 }
                 else -> return@setOnMenuItemClickListener true
 
-            }
+            }*/
 
             /*when(menuItem.itemId) {
                 R.id.item_adicionar -> {
@@ -102,14 +102,14 @@ class ToolbarActionbarActivity : AppCompatActivity() {
                 else -> true
 
             }*/
-        }
+//        }
 
-//        setSupportActionBar(binding.includeToolbar.tbMain)
-//        inicializarActionbar()
+        setSupportActionBar(binding.includeToolbar.tbMain)
+        inicializarActionbar()
 
     }
 
-    /*private fun inicializarActionbar() {
+    private fun inicializarActionbar() {
         addMenuProvider(
             object : MenuProvider {
                 override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
@@ -138,7 +138,7 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
             }
         )
-    }*/
+    }
 
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
