@@ -39,23 +39,27 @@ class FloatingActionButtonActivity : AppCompatActivity() {
 
             }
         }
-
-
-
     }
 
     private fun inicializarToolbar() {
 
-        binding.includeToolbar.tbMain.title = "YouTube"
+        binding.includeToolbar.clLogo.visibility = View.GONE
+
+//        binding.includeToolbar.tbMain.title = "Meus vídeos"
 //        binding.includeToolbar.tbMain.subtitle = "Mais detalhes"
-        binding.includeToolbar.tbMain.setTitleTextColor(
+        /*binding.includeToolbar.tbMain.setTitleTextColor(
             ContextCompat.getColor(this, R.color.md_theme_onPrimary)
-        )
-        binding.includeToolbar.tbMain.setBackgroundColor(
+        )*/
+        /*binding.includeToolbar.tbMain.setBackgroundColor(
             ContextCompat.getColor(this, R.color.md_theme_inversePrimary)
-        )
+        )*/
 
         setSupportActionBar(binding.includeToolbar.tbMain)
+
+        supportActionBar?.apply {
+            /*this?.*/setDisplayHomeAsUpEnabled(true)
+            title = "Biblioteca"
+        }
 
     }
 }

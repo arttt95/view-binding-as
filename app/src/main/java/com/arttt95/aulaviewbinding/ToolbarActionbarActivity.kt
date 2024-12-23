@@ -31,8 +31,6 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 
 //        supportActionBar?.hide()
 
-
-
         val intent = Intent(this, FloatingActionButtonActivity::class.java)
 
         inicializarToolbar()
@@ -110,10 +108,6 @@ class ToolbarActionbarActivity : AppCompatActivity() {
 //        inicializarActionbar()
 
     }
-
-
-
-
 
     /*private fun inicializarActionbar() {
         addMenuProvider(

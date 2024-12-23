@@ -32,6 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".FloatingActionButtonActivity"
+            android:parentActivityName=".ToolbarActionbarActivity"
             android:exported="false" />
         <activity
             android:name=".ButtonsDivingInActivity"

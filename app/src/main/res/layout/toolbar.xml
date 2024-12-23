@@ -8,16 +8,20 @@
         android:id="@+id/tbMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/md_theme_inversePrimary"
         android:elevation="8dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIconTint="@color/md_theme_onPrimary"
+        app:subtitleTextColor="@color/md_theme_secondary"
+        app:titleTextColor="@color/md_theme_onPrimary">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLogo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
